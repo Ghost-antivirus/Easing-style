@@ -3,35 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Моя первая веб-страница</title>
+    <title>Easing style - Roblox</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Добро пожаловать на мою первую веб-страницу!</h1>
-    </header>
-    
-    <nav>
-        <ul>
-            <li><a href="#">Главная</a></li>
-            <li><a href="#">О нас</a></li>
-            <li><a href="#">Контакты</a></li>
-        </ul>
-    </nav>
-
-    <main>
-        <section>
-            <h2>О нас</h2>
-            <p>Мы занимаемся созданием удивительных веб-сайтов!</p>
-        </section>
-
-        <section>
-            <h2>Контакты</h2>
-            <p>Напишите нам: example@example.com</p>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Моя первая веб-страница. Все права защищены.</p>
-    </footer>
+    <div class="container">
+        <h1>Приветствуем вас в нашем блоге разработчиков!<p>Easing style</p></h1>
+        <p>Предлагаем поразвлечься.</p>
+        <button onclick="changeColor()">Сменить цвет</button>
+    </div>
+    <script>
+        function changeColor() {
+            var container = document.querySelector('.container');
+            var randomColor = Math.floor(Math.random()*16777215).toString(16);
+            container.style.backgroundColor = "#" + randomColor;
+        }
+    </script>
 </body>
 </html>
